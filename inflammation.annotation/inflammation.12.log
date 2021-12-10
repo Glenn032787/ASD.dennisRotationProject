@@ -1,0 +1,60 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--print-snps resources/listHM3.txt \
+--ld-wind-cm 1.0 \
+--out inflammation.annotation/inflammation.12 \
+--bfile resources/1000G_EUR_Phase3_plink/1000G.EUR.QC.12 \
+--thin-annot  \
+--annot inflammation.annotation/inflammation.12.annot.gz \
+--l2  
+
+Beginning analysis at Thu Dec  9 23:35:01 2021
+Read list of 480110 SNPs from resources/1000G_EUR_Phase3_plink/1000G.EUR.QC.12.bim
+Read 1 annotations for 480110 SNPs from inflammation.annotation/inflammation.12.annot.gz
+Read list of 489 individuals from resources/1000G_EUR_Phase3_plink/1000G.EUR.QC.12.fam
+Reading genotypes from resources/1000G_EUR_Phase3_plink/1000G.EUR.QC.12.bed
+Estimating LD Score.
+Reading list of 1217311 SNPs for which to print LD Scores from resources/listHM3.txt
+After merging with --print-snps, LD Scores for 58543 SNPs will be printed.
+Writing LD Scores for 58543 SNPs to inflammation.annotation/inflammation.12.l2.ldscore.gz
+
+Summary of LD Scores in inflammation.annotation/inflammation.12.l2.ldscore.gz
+         MAF        L2
+mean  0.2334    7.2229
+std   0.1429   34.7966
+min   0.0051   -3.1408
+25%   0.1084    0.0000
+50%   0.2209    0.0000
+75%   0.3558    0.6372
+max   0.5000  616.2184
+
+MAF/LD Score Correlation Matrix
+        MAF      L2
+MAF  1.0000  0.0269
+L2   0.0269  1.0000
+
+Annotation Correlation Matrix
+       ANNOT
+ANNOT    1.0
+
+Annotation Matrix Column Sums
+ANNOT    24239
+
+Summary of Annotation Matrix Row Sums
+count    480110.0000
+mean          0.0505
+std           0.2189
+min           0.0000
+25%           0.0000
+50%           0.0000
+75%           0.0000
+max           1.0000
+Analysis finished at Thu Dec  9 23:36:25 2021
+Total time elapsed: 1.0m:23.9s
