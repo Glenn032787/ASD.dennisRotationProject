@@ -44,4 +44,4 @@ BED_file.FINAL <- BED_file %>%
   mutate(chromStart = chromStart - 1000, 
          chromEnd = chromEnd + 1000)
 
-write_delim(BED_file.FINAL, "diffExpressionRegion.bed", delim = "\t", col_names = FALSE)
+write_delim(BED_file.FINAL, "maternalInflamationGenes.bed", delim = "\t", col_names = FALSE)
