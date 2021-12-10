@@ -1,6 +1,6 @@
 #!/bin/bash
 #PBS -l walltime=8:00:00,select=1:ncpus=16:mem=64gb
-#PBS -N test.make_annot
+#PBS -N stratified_ldsc
 #PBS -A st-dennisjk-1
 #PBS -M glenn03@student.ubc.ca 
 #PBS -m bea
@@ -10,6 +10,8 @@ snpList_dir="resources/listHM3.txt"
 weights_dir="resources/weights_hm3_no_hla"
 freq_dir="resources/1000G_Phase3_frq"
 baselineLD_dir="resources/baselineLD"
+
+cd ${PBS_O_WORKDIR}
 
 source activate ldsc
 module load bedtools2
